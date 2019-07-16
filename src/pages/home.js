@@ -1,8 +1,24 @@
 import React, { Component } from 'react';
+import TitleInput from '../components/titleselect.js';
+import styled from 'styled-components';
 
-import ActorSelect from '../components/actorselect.js';
-import GenreSelect from '../components/genreselect.js';
-import TitleSelect from '../components/titleselect.js';
+const TitleSearch = styled.button`
+    color: palevioletred;
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border: 2px solid palevioletred;
+    border-radius: 3px;
+        `;
+
+const GetOptions = styled.button`
+    color: palevioletred;
+    font-size: 1em;
+    margin: 1em;
+    padding: 0.25em 1em;
+    border: 2px solid palevioletred;
+    border-radius: 3px;
+        `;
 
 class Home extends Component {
     render () {
@@ -10,10 +26,10 @@ class Home extends Component {
             <div className="Introduction">
             <h1> Welcome to MovieNight</h1>
                 <br></br>
-            <h1> Please make a selection below below to start your ultimate movie date night.</h1>
-            <ActorSelect />
-            <GenreSelect />
-            <TitleSelect />
+            <h1> What movie would you like to watch? </h1>
+            <TitleInput />
+            <TitleSearch>Search</TitleSearch>
+            <GetOptions>Give Me Options</GetOptions>
             </div>
         )
     }

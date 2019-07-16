@@ -1,16 +1,11 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-
-var TitleButton = styled.button`
-    font-size: 1.5em;
-    text-align: center;
-    color: palevioletred;`;
+import SimpleInput from 'react-simple-input';
 
 class TitleSelect extends Component {
     render () {
         return (
             <div>
-                <TitleButton> Title </TitleButton>
+                <SimpleInput placeholder='Title' />
             </div>
         )
     }

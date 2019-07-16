@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css'
 
-var GenreButton = styled.button`
-    font-size: 1.5em;
-    text-align: center;
-    color: palevioletred;`;
+const genreOptions = [
+    'Genre', 'Romantic Comedy', 'Action Movie'
+];
+
+const defaultOption = genreOptions[0];
+    
 
 class GenreSelect extends Component {
     render () {
         return (
             <div>
-                <GenreButton> Genre </GenreButton>
+                <Dropdown
+      onChange={this._onSelect}
+      value={defaultOption}
+      placeholder="Select Genre"
+      options={genreOptions}
+                />
             </div>
         )
     }

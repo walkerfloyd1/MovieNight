@@ -21,6 +21,22 @@ const GetOptions = styled.button`
         `;
 
 class Home extends Component {
+    constructor() {
+        super()
+        this.titleSubmit = this.titleSubmit.bind(this);
+        this.getOptions = this.getOptions.bind(this);
+    }
+
+    titleSubmit() {
+        let path="/movie";
+        this.props.history.push(path);
+    }
+
+    getOptions() {
+        let path="/input";
+        this.props.history.push(path);
+    }
+
     render () {
         return (
             <div className="Introduction">
@@ -28,8 +44,8 @@ class Home extends Component {
                 <br></br>
             <h1> What movie would you like to watch? </h1>
             <TitleInput />
-            <TitleSearch>Search</TitleSearch>
-            <GetOptions>Give Me Options</GetOptions>
+            <TitleSearch onClick={this.titleSubmit}>Search</TitleSearch>
+            <GetOptions onClick={this.getOptions}>Give Me Options</GetOptions>
             </div>
         )
     }

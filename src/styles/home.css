@@ -1,0 +1,16 @@
+.movieNight-appear {
+    opacity: 0.01;
+  }
+
+.movieNight-appear.movieNight-appear-active {
+    opacity: 1;
+    transition: opacity .7s ease-in;
+  }
+.choice-appear {
+    opacity: 0.01;
+  }
+
+.choice-appear.choice-appear-active {
+    opacity: 1;
+    transition: opacity .7s ease-in;
+  }

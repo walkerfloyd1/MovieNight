@@ -1,7 +1,6 @@
 import ResponsiveMenu from 'react-responsive-navbar';
-import React from "react";
+import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
-import axios from 'axios';
 import styled from 'styled-components';
 
 const Menu = styled.div`
@@ -12,13 +11,13 @@ const Menu = styled.div`
   }
   li {
     display: inline-block;
-    font-size: 13px;
+    font-size: 15px;
     margin-left: 30px;
   }
   a {
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 15px;
+    font-size: 20px;
     color: black;
     &:hover {
       color: white;
@@ -35,12 +34,7 @@ const Menu = styled.div`
   }
 `;
 
-class Navbar extends React.Component {
-  constructor() {
-    super()
-  }
-
-
+class HomeNav extends Component {
   render(){
     return (
       <ResponsiveMenu
@@ -54,7 +48,7 @@ class Navbar extends React.Component {
           <ul>
             <li className="nav-item">
               <Link to="/movie" className={window.location.pathname === "/movie" ? "nav-link active" : "nav-link"}>
-                Movie
+                Sign in
               </Link>
             </li>
             <li className="nav-item">
@@ -63,35 +57,9 @@ class Navbar extends React.Component {
             to="/results"
             className={window.location.pathname === "/results" ? "nav-link active" : "nav-link"}
               >
-                Snacks
+                Register
               </Link>
             </li>
-            <li className="nav-item">
-                {/* haven't written the code for the page yet */}
-              <Link
-                to="/articles"
-                className={window.location.pathname === "/articles" ? "nav-link active" : "nav-link"}
-              >
-                Profile
-              </Link>
-           </li>
-           <li className="nav-item">
-          <Link
-            to="/about"
-            className={window.location.pathname === "/about" ? "nav-link active" : "nav-link"}
-          >
-            About
-          </Link>
-        </li>
-        <li className="nav-item">
-          <Link
-            to="/"
-            className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}  
-            onClick={this.logout}
-          >
-            Logout
-          </Link>
-          </li>
           </ul>
           </Menu>
         }
@@ -100,4 +68,4 @@ class Navbar extends React.Component {
   }
 }
 
-export default Navbar;
+export default HomeNav;

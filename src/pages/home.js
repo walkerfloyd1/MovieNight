@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
 
+import HomeNav from "../components/homepageNav.js";
+
 import TitleInput from '../components/titleselect.js';
+
 import styled from 'styled-components';
+
 import { Container } from '../components/homeContainer.js';
+
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+
 import '../styles/home.css';
+
 
 
 const TitleSearch = styled.button`
@@ -24,6 +31,20 @@ const GetOptions = styled.button`
     border: 2px solid black;
     border-radius: 3px;
         `;
+
+const TopText = styled.text`
+    text-decoration: none;
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+    font-size: 25px;
+    color: black;
+    `;
+
+const BottomText = styled.text`
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    `;
 
 class Home extends Component {
     constructor() {
@@ -45,22 +66,24 @@ class Home extends Component {
     render () {
         return (
             <div className="Introduction">
+            <HomeNav />
             <Container>
             <ReactCSSTransitionGroup
   transitionName="movieNight" transitionAppear={true}
   transitionAppearTimeout={1000}>
-            <h1> Welcome to MovieNight</h1>
+            <TopText> Welcome to MovieNight.</TopText>
             </ReactCSSTransitionGroup>
             <ReactCSSTransitionGroup
   transitionName="choice" transitionAppear={true}
   transitionAppearTimeout={1000}>
                 <br></br>
-            <h1> What movie would you like to watch? </h1>
+            <BottomText> What movie would you like to watch? </BottomText>
             <TitleInput />
             <TitleSearch onClick={this.titleSubmit}>Search</TitleSearch>
             <GetOptions onClick={this.getOptions}>Give Me Options</GetOptions>
         </ReactCSSTransitionGroup>
             </Container>
+                
             </div>
         )
     }

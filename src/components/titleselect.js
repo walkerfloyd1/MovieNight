@@ -18,7 +18,7 @@ class TitleInput extends Component {
     render () {
         return (
             <div>
-                <Input type="text" />
+                <Input/>
             </div>
         )
     }

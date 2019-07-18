@@ -47,14 +47,14 @@ class HomeNav extends Component {
           <Menu>
           <ul>
             <li className="nav-item">
-              <Link to="/movie" className={window.location.pathname === "/movie" ? "nav-link active" : "nav-link"}>
+              <Link to="/signin" className={window.location.pathname === "/movie" ? "nav-link active" : "nav-link"}>
                 Sign in
               </Link>
             </li>
             <li className="nav-item">
                 {/* haven't written the code for the page yet */}
               <Link
-            to="/results"
+            to="/register"
             className={window.location.pathname === "/results" ? "nav-link active" : "nav-link"}
               >
                 Register

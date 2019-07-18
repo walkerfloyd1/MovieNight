@@ -85,8 +85,8 @@ class Navbar extends React.Component {
         </li>
         <li className="nav-item">
           <Link
-            to="/"
-            className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}  
+            to="/signin"
+            className={window.location.pathname === "/signin" ? "nav-link active" : "nav-link"}  
             onClick={this.logout}
           >
             Logout

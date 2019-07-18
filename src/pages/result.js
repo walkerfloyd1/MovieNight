@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import TitleResults from '../components/APIs/titleApiCall';
+import TitleResults from '../components/APIs/tmdbApiResults';
 import Navbar from '../components/navbar.js';
 
 class Movie extends Component {
     render() {
         return (
-            // <TitleResults />
+            <div>
             <Navbar />
+            <TitleResults />
+            </div>
         )
     }
 }

@@ -4,11 +4,11 @@ import axios from 'axios';
 import styled from 'styled-components';
 
 const Text = styled.text`
-        text-decoration: none;
-        padding-bottom: 10px;
-        margin-bottom: 60px;
-        font-size: 25px;
-        color: black;
+    text-decoration: none;
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+    font-size: 25px;
+    color: black;
 `;
 
 class TitleResults extends Component {
@@ -46,8 +46,7 @@ class TitleResults extends Component {
     }
     render() {
         return (
-            <div>
-            <h1>Results</h1>         
+            <div>       
             <Text>{this.state.title}</Text>
             <Text>{this.state.year}</Text>
             <Text>{this.state.poster}</Text>

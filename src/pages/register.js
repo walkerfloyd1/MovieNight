@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Container } from '../components/homeContainer.js';
 import Form from 'react-bootstrap/Form';
+import Home from './home.js';
 
 const Text = styled.text`
         text-decoration: none;
@@ -45,6 +46,7 @@ class Register extends Component {
     }
     render() {
         return (
+          <div>
             <Container>
             <Form>
   <Form.Group controlId="formBasicEmail">
@@ -73,6 +75,7 @@ class Register extends Component {
   </RegisterButton>
     </Form>
             </Container>
+            </div>
         )
     }
 }

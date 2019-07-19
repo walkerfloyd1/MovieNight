@@ -83,7 +83,6 @@ class Home extends Component {
             <GetOptions onClick={this.getOptions}>Give Me Options</GetOptions>
         </ReactCSSTransitionGroup>
             </Container>
-                
             </div>
         )
     }

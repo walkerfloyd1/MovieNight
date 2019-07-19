@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import { List, ListItem } from '../list.js';
 import axios from 'axios';
+import styled from 'styled-components';
+
+const Text = styled.text`
+        text-decoration: none;
+        padding-bottom: 10px;
+        margin-bottom: 60px;
+        font-size: 25px;
+        color: black;
+`;
 
 class TitleResults extends Component {
     constructor(props) {
@@ -39,13 +48,13 @@ class TitleResults extends Component {
         return (
             <div>
             <h1>Results</h1>         
-            <h2>{this.state.title}</h2>
-            <h2>{this.state.year}</h2>
-            <h2>{this.state.poster}</h2>
-            <h2>{this.state.plot}</h2>
-            <h2>{this.state.rating}</h2>
-            <h2>{this.state.genres}</h2>
-            <h2>{this.state.runtime}</h2>
+            <Text>{this.state.title}</Text>
+            <Text>{this.state.year}</Text>
+            <Text>{this.state.poster}</Text>
+            <Text>{this.state.plot}</Text>
+            <Text>{this.state.rating}</Text>
+            <Text>{this.state.genres}</Text>
+            <Text>{this.state.runtime}</Text>
             </div>
         )
     }

@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 
 import HomeNav from "../components/homepageNav.js";
 
-import TitleInput from '../components/titleselect.js';
-
 import styled from 'styled-components';
 
 import { Container } from '../components/homeContainer.js';
@@ -46,20 +44,14 @@ const BottomText = styled.text`
     color: black;
     `;
 
-class Home extends Component {
+class Landing extends Component {
     constructor() {
         super()
-        this.titleSubmit = this.titleSubmit.bind(this);
-        this.getOptions = this.getOptions.bind(this);
+        this.buttonClick = this.buttonClick.bind(this);
     }
 
-    titleSubmit() {
-        let path="/movie";
-        this.props.history.push(path);
-    }
-
-    getOptions() {
-        let path="/input";
+    buttonClick() {
+        let path="/home";
         this.props.history.push(path);
     }
 
@@ -77,10 +69,7 @@ class Home extends Component {
   transitionName="choice" transitionAppear={true}
   transitionAppearTimeout={1000}>
                 <br></br>
-            <BottomText> What movie would you like to watch? </BottomText>
-            <TitleInput />
-            <TitleSearch onClick={this.titleSubmit}>Search</TitleSearch>
-            <GetOptions onClick={this.getOptions}>Give Me Options</GetOptions>
+            <TitleSearch onClick={this.buttonClick}>Start Your Movie Night</TitleSearch>
         </ReactCSSTransitionGroup>
             </Container>
             </div>
@@ -88,4 +77,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default Landing;

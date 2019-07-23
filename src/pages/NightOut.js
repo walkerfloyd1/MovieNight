@@ -3,7 +3,9 @@ import Navbar from '../components/navbar.js';
 import styled from 'styled-components';
 import { Container } from '../components/homeContainer.js';
 
-import ZomatoResults from '../components/APIs/NightOut/zomatoAPI.js'
+import ZomatoResults from '../components/APIs/NightOut/zomatoAPI.js';
+
+import Showtimes from '../components/APIs/NightOut/graceNote.js'
 
 const Text = styled.text`
         text-decoration: none;
@@ -19,8 +21,10 @@ class NightOut extends Component {
             <div>
             <Navbar />
             <Container>
-            {/* <ZomatoResults /> */}
             <h1>Zomato Results</h1>
+            {/* <ZomatoResults /> */}
+            <h1>Showtime Results</h1>
+            <Showtimes />
             </Container>
             </div>
         )

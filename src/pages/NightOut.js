@@ -3,6 +3,8 @@ import Navbar from '../components/navbar.js';
 import styled from 'styled-components';
 import { Container } from '../components/homeContainer.js';
 
+import ZomatoResults from '../components/APIs/NightOut/zomatoAPI.js'
+
 const Text = styled.text`
         text-decoration: none;
         padding-bottom: 10px;
@@ -17,7 +19,7 @@ class NightOut extends Component {
             <div>
             <Navbar />
             <Container>
-            <Text>This is the Night Out landing page</Text>
+            <ZomatoResults />
             </Container>
             </div>
         )

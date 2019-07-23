@@ -13,13 +13,12 @@ class ZomatoResults extends React.Component {
     componentWillMount () {
         const config = { headers: {'user-key': '2ffbbf3d242039cdbc944efbd700bd6e'} }; 
         axios.get('https://developers.zomato.com/api/v2.1/geocode?lat=34.1562756&lon=-118.1236828', config)
-        .then(response => {
-            console.log(response)
-        }).then(data => {
-            let restaurants = data.nearby_restaurants.map((restaurant) => {
+        .then(res => {
+            let nearby = res.data.nearby_restaurants;
+            let restaurants = nearby.map((restaurant) => {
                 return (
                     <ul>
-                        <li>{restaurant.restaurant.name}</li>
+                        <li>{restaurant.name}</li>
                     </ul>
                 )
             })

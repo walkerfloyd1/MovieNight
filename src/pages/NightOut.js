@@ -22,7 +22,7 @@ class NightOut extends Component {
             <Navbar />
             <Container>
             <h1>Zomato Results</h1>
-            {/* <ZomatoResults /> */}
+            <ZomatoResults />
             <h1>Showtime Results</h1>
             <Showtimes />
             </Container>

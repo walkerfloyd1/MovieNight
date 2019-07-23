@@ -21,7 +21,7 @@ const Menu = styled.div`
     font-size: 15px;
     color: black;
     &:hover {
-      color: white;
+      color: gray;
       border-bottom: 1px solid
     }
   }

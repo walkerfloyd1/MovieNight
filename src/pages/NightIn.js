@@ -5,7 +5,7 @@ import Navbar from '../components/navbar.js';
 
 import { Container } from '../components/homeContainer.js';
 
-class Movie extends Component {
+class NightIn extends Component {
     render() {
         return (
         <div>
@@ -19,4 +19,4 @@ class Movie extends Component {
     }
 }
 
-export default Movie;
+export default NightIn;

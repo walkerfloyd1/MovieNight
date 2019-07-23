@@ -53,17 +53,17 @@ class Navbar extends React.Component {
           <Menu>
           <ul>
             <li className="nav-item">
-              <Link to="/movie" className={window.location.pathname === "/movie" ? "nav-link active" : "nav-link"}>
-                Movie
+              <Link to="/nightin" className={window.location.pathname === "/nightin" ? "nav-link active" : "nav-link"}>
+                Night In
               </Link>
             </li>
             <li className="nav-item">
                 {/* haven't written the code for the page yet */}
               <Link
-            to="/snacks"
-            className={window.location.pathname === "/food" ? "nav-link active" : "nav-link"}
+            to="/nightout"
+            className={window.location.pathname === "/nightout" ? "nav-link active" : "nav-link"}
               >
-                Food
+                Night Out
               </Link>
             </li>
             <li className="nav-item">

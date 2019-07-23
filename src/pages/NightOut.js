@@ -11,17 +11,17 @@ const Text = styled.text`
         color: black;
 `;
 
-class Snacks extends Component {
+class NightOut extends Component {
     render() {
         return (
             <div>
             <Navbar />
             <Container>
-            <Text>This is the Snacks landing page</Text>
+            <Text>This is the Night Out landing page</Text>
             </Container>
             </div>
         )
     }
 }
 
-export default Snacks;
+export default NightOut;

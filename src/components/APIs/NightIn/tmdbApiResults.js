@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { List, ListItem } from '../list.js';
+import { List, ListItem } from '../../list.js';
 import axios from 'axios';
 import styled from 'styled-components';
 

@@ -7,11 +7,10 @@ import Img from 'react-image';
 
 import '../../../styles/NightInMovie.css';
 
-const Text = styled.text`
+const Info = styled.text`
+    position: relative;
     text-decoration: none;
-    padding-bottom: 10px;
-    margin-bottom: 60px;
-    font-size: 25px;
+    font-size: 9px;
     color: black;
 `;
 
@@ -51,14 +50,15 @@ class TitleResults extends Component {
     render() {
         return (
             <div id="img_wrapper"> 
-                <Img src={this.state.poster}/>
+                <img src={this.state.poster}/>
                 <div id="img_description">
-                    <Text>{this.state.title}</Text>
-                    <Text>{this.state.year}</Text>
-                    <Text>{this.state.plot}</Text>
-                    <Text>{this.state.rating}</Text>
-                    <Text>{this.state.genres}</Text>
-                    <Text>{this.state.runtime}</Text>
+                    <Info>Title: {this.state.title}
+                    <br />
+                    Year: {this.state.year}
+                    <br /> Plot: {this.state.plot}
+                    <br /> Rating: {this.state.rating}
+                    <br /> Genre: {this.state.genres}
+                    <br /> Runtime: {this.state.runtime}</Info>
                 </div>
             </div>
         )

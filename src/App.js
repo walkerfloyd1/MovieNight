@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import Landing from "./pages/home.js";
-import Homepage from "./pages/homepage.js";
 import Preferences from './pages/preferences.js';
 import NightIn from './pages/NightIn.js';
 import Signin from './pages/signin.js';
@@ -16,7 +15,6 @@ class App extends React.Component {
     return (
       <Router>
         <Route exact path="/" component={Landing}/>
-        <Route exact path="/home" component={Homepage}/>
         <Route exact path="/preferences" component={Preferences}/>
         <Route exact path="/nightin" component={NightIn}/>
         <Route exact path="/signin" component={Signin}/>

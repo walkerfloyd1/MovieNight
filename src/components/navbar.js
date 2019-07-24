@@ -1,7 +1,7 @@
 import ResponsiveMenu from 'react-responsive-navbar';
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
-import axios from 'axios';
+
 import styled from 'styled-components';
 
 const Menu = styled.div`

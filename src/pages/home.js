@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import HomeNav from "../components/homepageNav.js";
-
 import styled from 'styled-components';
 
 import { Container } from '../components/homeContainer.js';
@@ -12,7 +10,7 @@ import '../styles/home.css';
 
 
 
-const TitleSearch = styled.button`
+const Button = styled.button`
     color: black;
     font-size: 1em;
     margin: 1em;
@@ -38,18 +36,23 @@ const BottomText = styled.text`
 class Landing extends Component {
     constructor() {
         super()
-        this.buttonClick = this.buttonClick.bind(this);
+        this.signIn = this.signIn.bind(this);
+        this.register = this.register.bind(this);
     }
 
-    buttonClick() {
-        let path="/home";
+    signIn() {
+        let path="/signin";
+        this.props.history.push(path);
+    }
+
+    register() {
+        let path="/register";
         this.props.history.push(path);
     }
 
     render () {
         return (
             <div className="Introduction">
-            <HomeNav />
             <Container>
             <ReactCSSTransitionGroup
   transitionName="movieNight" transitionAppear={true}
@@ -60,7 +63,8 @@ class Landing extends Component {
   transitionName="choice" transitionAppear={true}
   transitionAppearTimeout={1000}>
                 <br></br>
-            <TitleSearch onClick={this.buttonClick}>Start Your Movie Night</TitleSearch>
+            <Button onClick={this.signIn}>Sign In</Button>
+            <Button onClick={this.register}>Register</Button>
         </ReactCSSTransitionGroup>
             </Container>
             </div>

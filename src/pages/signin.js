@@ -48,7 +48,7 @@ class Signin extends Component {
     }
 
     signIn() {
-        let path="/movie";
+        let path="/preferences";
         this.props.history.push(path);
     }
 

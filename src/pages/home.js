@@ -21,15 +21,6 @@ const TitleSearch = styled.button`
     border-radius: 3px;
         `;
 
-const GetOptions = styled.button`
-    color: black;
-    font-size: 1em;
-    margin: 1em;
-    padding: 0.25em 1em;
-    border: 2px solid black;
-    border-radius: 3px;
-        `;
-
 const TopText = styled.text`
     text-decoration: none;
     padding-bottom: 10px;

@@ -5,6 +5,8 @@ import styled from 'styled-components';
 
 import Img from 'react-image';
 
+import '../../../styles/NightInMovie.css';
+
 const Text = styled.text`
     text-decoration: none;
     padding-bottom: 10px;
@@ -48,14 +50,16 @@ class TitleResults extends Component {
     }
     render() {
         return (
-            <div>  
-            <Text>{this.state.title}</Text>
-            <Text>{this.state.year}</Text>
-            <Img src={this.state.poster} />
-            <Text>{this.state.plot}</Text>
-            <Text>{this.state.rating}</Text>
-            <Text>{this.state.genres}</Text>
-            <Text>{this.state.runtime}</Text>
+            <div id="img_wrapper"> 
+                <Img src={this.state.poster}/>
+                <div id="img_description">
+                    <Text>{this.state.title}</Text>
+                    <Text>{this.state.year}</Text>
+                    <Text>{this.state.plot}</Text>
+                    <Text>{this.state.rating}</Text>
+                    <Text>{this.state.genres}</Text>
+                    <Text>{this.state.runtime}</Text>
+                </div>
             </div>
         )
     }

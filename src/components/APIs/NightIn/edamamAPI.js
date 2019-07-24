@@ -30,9 +30,8 @@ componentDidMount() {
         <div>
             <div className="container" style={{
                 backgroundColor: "#D8CBCB",
-                position: "fixed",
-                top: '60%',
-                left: '4%',
+                position: "relative",
+                width: '50%',
                 paddingBottom: '2px',
                 alignContent: 'center',
                 textAlign: 'center'

@@ -21,9 +21,9 @@ class NightOut extends Component {
             <div>
             <Navbar />
             <Container>
-            <h1>Zomato Results</h1>
+            <h1>Restaurants Near You</h1>
             <ZomatoResults />
-            <h1>Showtime Results</h1>
+            <h1>Movies Near You</h1>
             <Showtimes />
             </Container>
             </div>

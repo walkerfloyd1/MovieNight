@@ -3,6 +3,8 @@ import { List, ListItem } from '../../list.js';
 import axios from 'axios';
 import styled from 'styled-components';
 
+import Img from 'react-image';
+
 const Text = styled.text`
     text-decoration: none;
     padding-bottom: 10px;
@@ -46,10 +48,10 @@ class TitleResults extends Component {
     }
     render() {
         return (
-            <div>       
+            <div>  
             <Text>{this.state.title}</Text>
             <Text>{this.state.year}</Text>
-            <Text>{this.state.poster}</Text>
+            <Img src={this.state.poster} />
             <Text>{this.state.plot}</Text>
             <Text>{this.state.rating}</Text>
             <Text>{this.state.genres}</Text>

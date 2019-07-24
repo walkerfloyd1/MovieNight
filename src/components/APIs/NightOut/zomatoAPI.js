@@ -19,6 +19,8 @@ class ZomatoResults extends React.Component {
                 return (
                     <ul>
                         <li>{food.restaurant.name}</li>
+                        <li>{food.restaurant.url}</li>
+                        <li>{food.restaurant.location.city}</li>
                     </ul>
                 )
             })

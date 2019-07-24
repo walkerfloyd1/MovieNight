@@ -17,7 +17,9 @@ class Profile extends Component {
             <div>
             <Navbar />
             <Container>
-            <Text>This is the Profile landing page</Text>
+            <Text>This is where your name will go</Text>
+            <Text>This is where your Email will go</Text>
+            <Text>This is where your Preferences will go</Text>
             </Container>
             </div>
         )

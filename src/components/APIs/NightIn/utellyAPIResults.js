@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styled from 'styled-components';
 
+import TitleResults from './tmdbApiResults.js';
+
 const Text = styled.text`
         text-decoration: none;
         padding-bottom: 10px;
@@ -10,7 +12,7 @@ const Text = styled.text`
         color: black;
 `;
 
-class UtellyResults extends Component {
+class MovieResults extends Component {
     constructor () {
         super();
         this.state = {
@@ -27,12 +29,18 @@ class UtellyResults extends Component {
         //hard-coded, will need to figure out how to put in the users input
         axios.get("https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=bojack&country=us", config)
         .then(res => {
+            
             let streamingSites = res.data.results.map((movie) => {
+               
+            for (let i = 0; i < movie.locations.length; i++) {
+
                 return (
                     <ul>
                     <li>{movie.name}</li>
+                    <li>{movie.locations[i].display_name}</li>
                     </ul>
                 )
+                }
             })
             this.setState({
                 streamingSites: streamingSites
@@ -43,9 +51,12 @@ class UtellyResults extends Component {
 
     render() {
         return (
+        <div className="Container">
+            <TitleResults />
             <div>{this.state.streamingSites}</div>
+        </div>
         )
     }
 }
 
-export default UtellyResults;
+export default MovieResults;

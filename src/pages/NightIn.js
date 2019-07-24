@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import TitleResults from '../components/APIs/NightIn/tmdbApiResults';
-import UtellyResults from '../components/APIs/NightIn/utellyAPIResults';
+
+import MovieResults from '../components/APIs/NightIn/utellyAPIResults';
 import Navbar from '../components/navbar.js';
 import RecipeResults from '../components/APIs/NightIn/edamamAPI.js';
 
@@ -12,8 +12,9 @@ class NightIn extends Component {
         <div>
             <Navbar />
             <Container>
-            <TitleResults />
-            <UtellyResults />
+            <MovieResults />
+            </Container>
+            <Container>
             <RecipeResults />
             </Container>
         </div>

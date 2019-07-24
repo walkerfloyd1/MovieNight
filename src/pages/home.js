@@ -33,7 +33,7 @@ const BottomText = styled.text`
     color: black;
     `;
 
-class Landing extends Component {
+class Home extends Component {
     constructor() {
         super()
         this.signIn = this.signIn.bind(this);
@@ -72,4 +72,4 @@ class Landing extends Component {
     }
 }
 
-export default Landing;
+export default Home;

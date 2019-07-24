@@ -32,6 +32,7 @@ componentDidMount() {
                 backgroundColor: "#D8CBCB",
                 position: "relative",
                 width: '50%',
+                top: '500px',
                 paddingBottom: '2px',
                 alignContent: 'center',
                 textAlign: 'center'

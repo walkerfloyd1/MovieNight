@@ -60,11 +60,11 @@ class Navbar extends React.Component {
                 Preferences
               </Link>
           </li>
-            <li className="nav-item">
+          <li className="nav-item">
               <Link to="/nightin" className={window.location.pathname === "/nightin" ? "nav-link active" : "nav-link"}>
                 Night In
               </Link>
-            </li>
+          </li>
             <li className="nav-item">
                 {/* haven't written the code for the page yet */}
               <Link

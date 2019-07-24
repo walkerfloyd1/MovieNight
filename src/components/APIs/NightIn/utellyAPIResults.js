@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-import styled from 'styled-components';
 
-import TitleResults from './tmdbApiResults.js';
+import { List, ListItem } from '../../list';
+
+import axios from 'axios';
+
+import styled from 'styled-components';
 
 const Text = styled.text`
         text-decoration: none;
@@ -27,18 +29,17 @@ class StreamingResults extends Component {
         }
         }
         //hard-coded, will need to figure out how to put in the users input
-        axios.get("https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=bojack&country=us", config)
+        axios.get("https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=harry+potter+and+the+deathly+hallows+part+2&country=us", config)
         .then(res => {
             
             let streamingSites = res.data.results.map((movie) => {
                
             for (let i = 0; i < movie.locations.length; i++) {
 
+            let streams = movie.locations;
+
                 return (
-                    <ul>
-                    <li>{movie.name}</li>
-                    <li>{movie.locations[i].display_name}</li>
-                    </ul>
+                    <a href={streams[i].url}><img src={streams[i].icon}/></a>
                 )
                 }
             })
@@ -52,7 +53,6 @@ class StreamingResults extends Component {
     render() {
         return (
         <div className="Container">
-            <TitleResults />
             <div>{this.state.streamingSites}</div>
         </div>
         )

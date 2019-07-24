@@ -4,8 +4,6 @@ import MovieResults from '../components/APIs/NightIn/tmdbApiResults';
 import Navbar from '../components/navbar.js';
 import RecipeResults from '../components/APIs/NightIn/edamamAPI.js';
 
-
-
 class NightIn extends Component {
     render() {
         return (

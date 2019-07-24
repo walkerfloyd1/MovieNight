@@ -8,11 +8,11 @@ import StreamingResults from './utellyAPIResults';
 import Img from 'react-image';
 
 import '../../../styles/NightInMovie.css';
+import { Stream } from 'stream';
 
 const Info = styled.text`
     position: relative;
     text-decoration: none;
-    font-size: 9px;
     color: black;
 `;
 
@@ -60,8 +60,9 @@ class MovieResults extends Component {
                     <br /> Plot: {this.state.plot}
                     <br /> Rating: {this.state.rating}
                     <br /> Genre: {this.state.genres}
-                    <br /> Runtime: {this.state.runtime}</Info>
+                    <br /> Runtime: {this.state.runtime}
                     <StreamingResults />
+                    </Info>
                 </div>
             </div>
         )

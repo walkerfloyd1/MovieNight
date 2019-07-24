@@ -16,6 +16,7 @@ img {
 #img_description {
   position: fixed;
   text-align: center;
+  font-size: 15px;
   background: rgba(255,255,255,0.5);
   width: fill;
   height: fill;

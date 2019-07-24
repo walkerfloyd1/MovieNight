@@ -1,4 +1,5 @@
 import React from "react";
+import { relative } from "upath";
 
 // This file exports both the List and ListItem components
 
@@ -12,9 +13,8 @@ export function List({ children }) {
 
 export function ListItem({ children }) {
   return <li className="list-group-item" style={{
+    position: 'relative',
     paddingTop: 0,
     paddingBottom: 0,
-    textAlign: "center",
-    backgroundColor: "white"
   }}>{children}</li>;
 }

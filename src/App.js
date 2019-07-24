@@ -17,7 +17,7 @@ class App extends React.Component {
       <Router>
         <Route exact path="/" component={Landing}/>
         <Route exact path="/home" component={Homepage}/>
-        <Route exact path="/input" component={Preferences}/>
+        <Route exact path="/preferences" component={Preferences}/>
         <Route exact path="/nightin" component={NightIn}/>
         <Route exact path="/signin" component={Signin}/>
         <Route exact path="/register" component={Register}/>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Container } from '../components/homeContainer.js';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import HomeNav from "../components/homepageNav.js";
+import Navbar from "../components/navbar.js";
 import '../styles/home.css';
 
 const Text = styled.text`
@@ -26,7 +26,7 @@ const Input = styled.input`
     margin-bottom: 10px;
     `;
 
-const FindMovie = styled.button`
+const Button = styled.button`
     color: black;
     font-size: 1em;
     margin: 1em;
@@ -37,20 +37,39 @@ const FindMovie = styled.button`
 
 class Preferences extends Component {
 
-    constructor() {
-        super()
-        this.findMovie = this.findMovie.bind(this);
+    constructor(props) {
+        super(props);
+        this.state = {value: 'american'};
+
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.stayIn = this.stayIn.bind(this);
+        this.goOut = this.goOut.bind(this);
     }
 
-    findMovie () {
-        let path="/movie";
+    handleChange(event) {
+        this.setState({value: event.target.value});
+      }
+    
+    handleSubmit(event) {
+        alert('Your favorite food is: ' + this.state.value);
+        event.preventDefault();
+    }
+
+    stayIn () {
+        let path="/nightin";
+        this.props.history.push(path);
+    }
+
+    goOut () {
+        let path="/nightout";
         this.props.history.push(path);
     }
 
     render() {
         return (
             <div className="Introduction">
-            <HomeNav />
+            <Navbar />
             <Container>
             <ReactCSSTransitionGroup
   transitionName="movieNight" transitionAppear={true}
@@ -68,9 +87,19 @@ class Preferences extends Component {
   transitionName="choice" transitionAppear={true}
   transitionAppearTimeout={1000}>
                 <br></br>
-            <Text> What rating? </Text>
-            <Input />
-            <FindMovie onClick={this.findMovie}>Find Me A Movie </FindMovie>
+        <form>
+        <Text>
+          Pick your favorite cuisine:
+          <select value={this.state.value} onChange={this.handleChange}>
+            <option value="american">American</option>
+            <option value="french">French</option>
+            <option value="italian">Italian</option>
+            <option value="spanish">Spanish</option>
+          </select>
+        </Text>
+      </form>
+            <Button onClick={this.stayIn}> Stay In </Button>
+            <Button onClick={this.goOut}> Go Out </Button>
         </ReactCSSTransitionGroup>
             </Container>
             </div>

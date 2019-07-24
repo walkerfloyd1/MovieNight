@@ -3,6 +3,8 @@ import { List, ListItem } from '../../list.js';
 import axios from 'axios';
 import styled from 'styled-components';
 
+import StreamingResults from './utellyAPIResults';
+
 import Img from 'react-image';
 
 import '../../../styles/NightInMovie.css';
@@ -14,7 +16,7 @@ const Info = styled.text`
     color: black;
 `;
 
-class TitleResults extends Component {
+class MovieResults extends Component {
     constructor(props) {
         super(props);
             this.state={
@@ -59,10 +61,11 @@ class TitleResults extends Component {
                     <br /> Rating: {this.state.rating}
                     <br /> Genre: {this.state.genres}
                     <br /> Runtime: {this.state.runtime}</Info>
+                    <StreamingResults />
                 </div>
             </div>
         )
     }
 }
 
-export default TitleResults;
+export default MovieResults;

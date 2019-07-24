@@ -12,7 +12,7 @@ const Text = styled.text`
         color: black;
 `;
 
-class MovieResults extends Component {
+class StreamingResults extends Component {
     constructor () {
         super();
         this.state = {
@@ -59,4 +59,4 @@ class MovieResults extends Component {
     }
 }
 
-export default MovieResults;
+export default StreamingResults;

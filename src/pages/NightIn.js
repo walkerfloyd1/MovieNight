@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import MovieResults from '../components/APIs/NightIn/utellyAPIResults';
+import MovieResults from '../components/APIs/NightIn/tmdbApiResults';
 import Navbar from '../components/navbar.js';
 import RecipeResults from '../components/APIs/NightIn/edamamAPI.js';
 

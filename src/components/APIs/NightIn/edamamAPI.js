@@ -28,16 +28,8 @@ componentDidMount() {
     render() {
         return (
         <div>
-            <div className="container" style={{
-                backgroundColor: "#D8CBCB",
-                position: "relative",
-                width: '50%',
-                top: '500px',
-                paddingBottom: '2px',
-                alignContent: 'center',
-                textAlign: 'center'
-            }}>
-            <h1>Diet: </h1>
+            <div>
+            <h1>Recommended Recipes: </h1>
             {this.state.recipes}
             </div>
         </div>

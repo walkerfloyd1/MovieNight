@@ -5,18 +5,18 @@ import styled from 'styled-components';
 
 import StreamingResults from './utellyAPIResults';
 
+import RecipeResults from './edamamAPI';
+
 import Img from 'react-image';
 
 import '../../../styles/NightInMovie.css';
-import { Stream } from 'stream';
 
 const Info = styled.text`
     position: relative;
     text-decoration: none;
-    color: black;
 `;
 
-class MovieResults extends Component {
+class NightInResults extends Component {
     constructor(props) {
         super(props);
             this.state={
@@ -52,7 +52,7 @@ class MovieResults extends Component {
     render() {
         return (
             <div id="img_wrapper"> 
-                <img src={this.state.poster}/>
+                <img src={this.state.poster} id="poster"/>
                 <div id="img_description">
                     <Info>Title: {this.state.title}
                     <br />
@@ -62,6 +62,7 @@ class MovieResults extends Component {
                     <br /> Genre: {this.state.genres}
                     <br /> Runtime: {this.state.runtime}
                     <StreamingResults />
+                    <RecipeResults />
                     </Info>
                 </div>
             </div>
@@ -69,4 +70,4 @@ class MovieResults extends Component {
     }
 }
 
-export default MovieResults;
+export default NightInResults;

@@ -5,6 +5,27 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import Navbar from "../components/navbar.js";
 import '../styles/home.css';
 
+import Select from 'react-select';
+
+const genreOptions = [
+    { value: 'Romance', label: 'Romance'},
+    { value: 'Comedy', label: 'Comedy'},
+    { value: 'Action', label: 'Action'},
+    { value: 'Horror', label: 'Horror'},
+    { value: 'Crime', label: 'Crime'},
+    { value: 'Thriller', label: 'Thriller'},
+    { value: 'Drama', label: 'Drama'},
+];
+
+const foodOptions = [
+    { value: 'American', label: 'American'},
+    { value: 'Chinese', label: 'Chinese'},
+    { value: 'Korean', label: 'Korean'},
+    { value: 'Mexican', label: 'Mexican'},
+    { value: 'Italian', label: 'Italian'},
+    { value: 'French', label: 'French'},
+];
+
 const Text = styled.text`
         text-decoration: none;
         padding-bottom: 10px;
@@ -81,7 +102,8 @@ class Preferences extends Component {
   transitionAppearTimeout={1000}>
                 <br></br>
             <Text> What genre of movie would you like to watch? </Text>
-            <Input />
+            {/* <Input /> */}
+            <Select options={genreOptions} />
         </ReactCSSTransitionGroup>
         <ReactCSSTransitionGroup
   transitionName="choice" transitionAppear={true}
@@ -89,14 +111,9 @@ class Preferences extends Component {
                 <br></br>
         <form>
         <Text>
-          Pick your favorite cuisine:
-          <select value={this.state.value} onChange={this.handleChange}>
-            <option value="american">American</option>
-            <option value="french">French</option>
-            <option value="italian">Italian</option>
-            <option value="spanish">Spanish</option>
-          </select>
+          What are you in the mood for?
         </Text>
+        <Select options={foodOptions} />
       </form>
             <Button onClick={this.stayIn}> Stay In </Button>
             <Button onClick={this.goOut}> Go Out </Button>

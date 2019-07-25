@@ -6,22 +6,29 @@
     right: '50%';
 }
 
-img {
+#poster {
     position: fixed;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    transform: translate(-50%, -40%);
+}
+
+img {
+  margin-right: 20px;
 }
 
 #img_description {
+  border: 3px solid black;
+  border-width: 1px;
   position: fixed;
   text-align: center;
   font-size: 15px;
-  background: rgba(255,255,255,0.5);
+  color: white;
+  background: black;
   width: fill;
-  height: fill;
+  height: 600px;
   visibility: hidden;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 40%);
   opacity: 0;
   display: flex;
   align-items: center;

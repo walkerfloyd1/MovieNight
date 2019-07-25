@@ -1,13 +1,9 @@
+//This is where the TMDB API call for Night In will go
+
 import React, { Component } from 'react';
 import { List, ListItem } from '../../list.js';
 import axios from 'axios';
 import styled from 'styled-components';
-
-import StreamingResults from './utellyAPIResults';
-
-import RecipeResults from './edamamAPI';
-
-import Img from 'react-image';
 
 import '../../../styles/NightInMovie.css';
 
@@ -16,7 +12,7 @@ const Info = styled.text`
     text-decoration: none;
 `;
 
-class NightInResults extends Component {
+class NightOutResults extends Component {
     constructor(props) {
         super(props);
             this.state={
@@ -61,8 +57,6 @@ class NightInResults extends Component {
                     <br /> Rating: {this.state.rating}
                     <br /> Genre: {this.state.genres}
                     <br /> Runtime: {this.state.runtime}
-                    <StreamingResults />
-                    <RecipeResults />
                     </Info>
                 </div>
             </div>
@@ -70,4 +64,4 @@ class NightInResults extends Component {
     }
 }
 
-export default NightInResults;
+export default NightOutResults;

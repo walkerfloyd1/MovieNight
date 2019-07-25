@@ -11,15 +11,19 @@ class Showtimes extends Component {
     }
 
     componentDidMount() {
-        axios.get("http://data.tmsapi.com/v1.1/movies/showings?startDate=2019-07-23&zip=91106&api_key=72qrmnsdp4sgw2wwam29d4ub")
-        .then(data => {
-            let movies = data.map((movie) => {
+        axios.get("http://data.tmsapi.com/v1.1/movies/showings?startDate=2019-07-24&zip=91106&api_key=72qrmnsdp4sgw2wwam29d4ub")
+        .then(res => {
+            console.log(res);
+            let movies = res.data.map((movie) => {
                 for (let i = 0; i < movie.showtimes.length; i++) {
-                return (
+                
+                let shows = movie.showtimes
+
+                return (   
                     <ul>
                         <li>{movie.title}</li>
-                        <li>{movie.showtimes[i].theatre.name}</li>
-                        <li>{movie.showtimes[i].dateTime}</li>
+                        <li>{shows[i].theatre.name}</li>
+                        <li>{shows[i].dateTime}</li>
                     </ul>
                 )
                 }

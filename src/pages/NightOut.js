@@ -3,11 +3,11 @@ import Navbar from '../components/navbar.js';
 import styled from 'styled-components';
 import { Container } from '../components/homeContainer.js';
 
-import GoogleApiWrapper from '../components/APIs/NightOut/googleMapsAPI.js'
-
 import ZomatoResults from '../components/APIs/NightOut/zomatoAPI.js';
 
-import Showtimes from '../components/APIs/NightOut/graceNote.js'
+import Showtimes from '../components/APIs/NightOut/graceNote.js';
+
+import Map from '../components/APIs/NightOut/MapboxAPI'
 
 const Text = styled.text`
         text-decoration: none;
@@ -22,12 +22,12 @@ class NightOut extends Component {
         return (
             <div>
             <Navbar />
+            <Map />
             <Container>
-                <GoogleApiWrapper />
-            {/* {/* <h1>Restaurants Near You</h1>
+            <h1>Restaurants Near You</h1>
             <ZomatoResults />
             <h1>Movies Near You</h1>
-            <Showtimes /> */}
+            <Showtimes />
             </Container>
             </div>
         )

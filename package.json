@@ -17,9 +17,11 @@
     "react-coverflow": "^0.2.20",
     "react-dom": "^16.8.6",
     "react-dropdown": "^1.6.4",
+    "react-id-swiper": "^2.3.2",
     "react-image": "^2.1.3",
     "react-map-gl": "^5.0.7",
     "react-modal": "^3.9.1",
+    "react-modal-dialog": "^4.0.7",
     "react-responsive-menu": "^1.0.1",
     "react-responsive-modal": "^4.0.1",
     "react-responsive-navbar": "^1.0.11",
@@ -34,6 +36,7 @@
     "sequelize": "^5.10.2",
     "shards-react": "^1.0.3",
     "styled-components": "^4.3.2",
+    "swiper": "^4.5.0",
     "typescript": "^3.5.3"
   },
   "scripts": {

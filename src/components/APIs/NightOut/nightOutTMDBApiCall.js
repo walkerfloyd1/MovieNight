@@ -1,6 +1,6 @@
 //This is where the TMDB API call for Night In will go
 
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
 
 import Coverflow from 'react-coverflow';
 
@@ -17,11 +17,11 @@ const Body = styled.text`
     text-decoration: none;
 `;
 
-class NightOutResults extends Component {
+class NightOutResults extends React.Component {
     constructor(props) {
         super(props);
             this.state={
-                movies: []
+                movies: [],
             }
     }
 
@@ -31,15 +31,11 @@ class NightOutResults extends Component {
             console.log(response.data.results);
             let movies = response.data.results.map((movie) => {
                 return (
-                    <div className="img_wrapper">
+                    <div>
                     <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} style={{
                         width: "100%",
-                    }} className="poster"/>
-                    <div className="img_description">
-                        <Body>
-                            Title: {movie.title}
-                        </Body>
-                    </div>
+                    }} className="poster" />
+                    <p>{movie.overview}</p>
                     </div>
                 )
             })

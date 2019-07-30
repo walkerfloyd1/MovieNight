@@ -16,49 +16,33 @@ class NightOutResults extends Component {
     constructor(props) {
         super(props);
             this.state={
-                title: '',
-                year: '',
-                poster: '',
-                plot: '',
-                rating: '',
-                genres: '',
-                runtime: ''
+                movies: []
             }
     }
 
     componentWillMount() {
-        axios.get("http://www.omdbapi.com/?t=harry+potter&y=&plot=short&apikey=trilogy")
+        axios.get("https://api.themoviedb.org/3/movie/now_playing?api_key=2f627286a0a498c692e51fcca9afb912&language=en-US&page=1")
         .then(response => {
-            console.log(response);
-            this.setState ({
-                title: response.data.Title,
-                year: response.data.Year,
-                poster: response.data.Poster,
-                plot: response.data.Plot,
-                rating: response.data.imdbRating,
-                genres: response.data.Genre,
-                runtime: response.data.Runtime,
+            console.log(response.data.results);
+            let movies = response.data.results.map((movie) => {
+                return (
+                    <ul>
+                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
+                    </ul>
+                )
+            })
+            this.setState({
+                movies: movies,
+            })
+            console.log("movies", this.state.movies)
             })
 
-            })
-            .catch(err => {
-                console.log(err)
-            })
-    }
+            }
+    
     render() {
         return (
-            <div id="img_wrapper"> 
-                <img src={this.state.poster} id="poster"/>
-                <div id="img_description">
-                    <Info>Title: {this.state.title}
-                    <br />
-                    Year: {this.state.year}
-                    <br /> Plot: {this.state.plot}
-                    <br /> Rating: {this.state.rating}
-                    <br /> Genre: {this.state.genres}
-                    <br /> Runtime: {this.state.runtime}
-                    </Info>
-                </div>
+            <div> 
+                {this.state.movies}
             </div>
         )
     }

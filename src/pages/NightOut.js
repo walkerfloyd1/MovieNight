@@ -5,6 +5,8 @@ import { Container } from '../components/homeContainer.js';
 
 import ZomatoResults from '../components/APIs/NightOut/zomatoAPI.js';
 
+import NightOutResults from '../components/APIs/NightOut/nightOutTMDBApiCall';
+
 import Showtimes from '../components/APIs/NightOut/graceNote.js';
 
 import Map from '../components/APIs/NightOut/MapboxAPI'
@@ -26,8 +28,8 @@ class NightOut extends Component {
             <Container>
             <h1>Restaurants Near You</h1>
             <ZomatoResults />
-            <h1>Movies Near You</h1>
-            <Showtimes />
+            <h1>Now Showing</h1>
+            <NightOutResults />
             </Container>
             </div>
         )

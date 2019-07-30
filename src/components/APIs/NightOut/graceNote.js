@@ -11,7 +11,7 @@ class Showtimes extends Component {
     }
 
     componentDidMount() {
-        axios.get("http://data.tmsapi.com/v1.1/movies/showings?startDate=2019-07-29&zip=91106&api_key=72qrmnsdp4sgw2wwam29d4ub")
+        fetch("http://data.tmsapi.com/v1.1/movies/showings?startDate=2019-07-29&zip=91106&api_key=72qrmnsdp4sgw2wwam29d4ub")
         .then(res => {
             console.log(res);
             let movies = res.data.map((movie) => {

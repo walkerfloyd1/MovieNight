@@ -15,9 +15,9 @@ export default class Map extends Component {
         super(props);
         this.state = {
             viewport:  {
-                latitude: 37.785164,
-                longitude: -100,
-                zoom: 2.8,
+                latitude: 34.1481036,
+                longitude: -118.1229172,
+                zoom: 12.0,
                 bearing: 0,
                 pitch: 0,
                 width: 500,
@@ -30,7 +30,7 @@ export default class Map extends Component {
         return (
             <MapGL
             {...viewport}
-            mapStyle="mapbox://styles/mapbox/dark-v9"
+            mapStyle="mapbox://styles/airfloyd/cjyoumbqi4zy01cpoudluxlwe"
             mapboxApiAccessToken={token}>
                 <div className="nav" style={navStyle}>
                     <NavigationControl />

@@ -7,8 +7,6 @@ import ZomatoResults from '../components/APIs/NightOut/zomatoAPI.js';
 
 import NightOutResults from '../components/APIs/NightOut/nightOutTMDBApiCall';
 
-import Showtimes from '../components/APIs/NightOut/graceNote.js';
-
 import Map from '../components/APIs/NightOut/MapboxAPI'
 
 const Text = styled.text`
@@ -24,12 +22,11 @@ class NightOut extends Component {
         return (
             <div>
             <Navbar />
-            <Map />
             <Container>
-            <h1>Restaurants Near You</h1>
+            <NightOutResults />
+            <Map />
             <ZomatoResults />
             <h1>Now Showing</h1>
-            <NightOutResults />
             </Container>
             </div>
         )

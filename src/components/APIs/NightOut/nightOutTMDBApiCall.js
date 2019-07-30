@@ -1,13 +1,18 @@
 //This is where the TMDB API call for Night In will go
 
 import React, { Component } from 'react';
-import { List, ListItem } from '../../list.js';
+
+import Coverflow from 'react-coverflow';
+
+import "../../../styles/tmdbResults.css";
+
 import axios from 'axios';
+
 import styled from 'styled-components';
 
 import '../../../styles/NightInMovie.css';
 
-const Info = styled.text`
+const Body = styled.text`
     position: relative;
     text-decoration: none;
 `;
@@ -26,9 +31,16 @@ class NightOutResults extends Component {
             console.log(response.data.results);
             let movies = response.data.results.map((movie) => {
                 return (
-                    <ul>
-                        <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
-                    </ul>
+                    <div className="img_wrapper">
+                    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} style={{
+                        width: "100%",
+                    }} className="poster"/>
+                    <div className="img_description">
+                        <Body>
+                            Title: {movie.title}
+                        </Body>
+                    </div>
+                    </div>
                 )
             })
             this.setState({
@@ -41,9 +53,14 @@ class NightOutResults extends Component {
     
     render() {
         return (
-            <div> 
+            <Coverflow width="960" height="400"
+            displayQuantityOfSide={2}
+            navigation={true}
+            enableScroll={true}
+            clickable={true}
+            active={0}> 
                 {this.state.movies}
-            </div>
+            </Coverflow>
         )
     }
 }

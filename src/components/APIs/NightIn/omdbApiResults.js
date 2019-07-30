@@ -1,8 +1,9 @@
-//This is where the TMDB API call for Night In will go
-
 import React, { Component } from 'react';
+
 import { List, ListItem } from '../../list.js';
+
 import axios from 'axios';
+
 import styled from 'styled-components';
 
 import StreamingResults from './utellyAPIResults';
@@ -13,7 +14,7 @@ import Img from 'react-image';
 
 import '../../../styles/NightInMovie.css';
 
-const Info = styled.text`
+const Body = styled.text`
     position: relative;
     text-decoration: none;
 `;
@@ -56,7 +57,7 @@ class NightInResults extends Component {
             <div id="img_wrapper"> 
                 <img src={this.state.poster} id="poster"/>
                 <div id="img_description">
-                    <Info>Title: {this.state.title}
+                    <Body>Title: {this.state.title}
                     <br />
                     Year: {this.state.year}
                     <br /> Plot: {this.state.plot}
@@ -65,7 +66,7 @@ class NightInResults extends Component {
                     <br /> Runtime: {this.state.runtime}
                     <StreamingResults />
                     <RecipeResults />
-                    </Info>
+                    </Body>
                 </div>
             </div>
         )

@@ -2,6 +2,8 @@ import React from 'react';
 
 import axios from 'axios';
 
+import { Container } from '../../homeContainer.js';
+
 class ZomatoResults extends React.Component {
     constructor() {
         super ();
@@ -31,6 +33,7 @@ class ZomatoResults extends React.Component {
     render () {
         return (
             <div>
+                <h1>Restaurants Near You</h1>
                 {this.state.restaurants}
             </div>
         )

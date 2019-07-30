@@ -2,15 +2,20 @@
 
 import React, { PropTypes } from 'react';
 
-import Coverflow from 'react-coverflow';
-
-import "../../../styles/tmdbResults.css";
-
 import axios from 'axios';
 
 import styled from 'styled-components';
 
-import '../../../styles/NightInMovie.css';
+import { Carousel } from 'react-responsive-carousel';
+
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+import { Container } from '../../postersContainer';
+
+import "../../../styles/tmdbResults.css";
+
+
+import "../../../styles/carousel.css";
 
 const Body = styled.text`
     position: relative;
@@ -31,12 +36,9 @@ class NightOutResults extends React.Component {
             console.log(response.data.results);
             let movies = response.data.results.map((movie) => {
                 return (
-                    <div>
-                    <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} style={{
-                        width: "100%",
-                    }} className="poster" />
-                    <p>{movie.overview}</p>
-                    </div>
+                    <img 
+                    src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                    />
                 )
             })
             this.setState({
@@ -49,14 +51,11 @@ class NightOutResults extends React.Component {
     
     render() {
         return (
-            <Coverflow width="960" height="400"
-            displayQuantityOfSide={2}
-            navigation={true}
-            enableScroll={true}
-            clickable={true}
-            active={0}> 
+            <Carousel showThumbs={false} style={{
+                fontFamily: "Raleway, sans-serif",
+              }}> 
                 {this.state.movies}
-            </Coverflow>
+            </Carousel>
         )
     }
 }

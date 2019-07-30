@@ -22,11 +22,12 @@ class NightOut extends Component {
         return (
             <div>
             <Navbar />
-            <Container>
-            <NightOutResults />
-            <Map />
-            <ZomatoResults />
             <h1>Now Showing</h1>
+            <NightOutResults />
+            <Container>
+            {/* <Map />
+            <ZomatoResults /> */}
+
             </Container>
             </div>
         )

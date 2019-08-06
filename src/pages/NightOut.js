@@ -25,8 +25,8 @@ class NightOut extends Component {
             <h1>Now Showing</h1>
             <NightOutResults />
             <Container>
-            {/* <Map />
-            <ZomatoResults /> */}
+            <Map />
+            <ZomatoResults />
 
             </Container>
             </div>

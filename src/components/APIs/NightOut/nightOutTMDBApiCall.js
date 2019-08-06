@@ -36,9 +36,14 @@ class NightOutResults extends React.Component {
             console.log(response.data.results);
             let movies = response.data.results.map((movie) => {
                 return (
+                    <div class="pic">
                     <img 
                     src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
                     />
+                    <div class="overlay">
+                        <p>{movie.overview}</p>
+                    </div>
+                    </div>
                 )
             })
             this.setState({

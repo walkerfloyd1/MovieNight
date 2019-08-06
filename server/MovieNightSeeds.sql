@@ -1,4 +1,3 @@
-
 USE movie_night_db;
 
 INSERT INTO Users

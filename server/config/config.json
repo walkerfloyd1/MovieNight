@@ -3,7 +3,7 @@
     "development": {
         "username": "walkerfloyd",
         "password": "GoHeels12345!",
-        "database": "movie-night-db",
+        "database": "movie_night_db",
         "host": "movie-night-db.cil5mbfsdo5l.us-east-2.rds.amazonaws.com",
         "port": 3306,
         "dialect": "mysql"
@@ -11,7 +11,7 @@
     "test": {
         "username": "walkerfloyd",
         "password": "GoHeels12345!",
-        "database": "movie-night-db",
+        "database": "movie_night_db",
         "host": "movie-night-db.cil5mbfsdo5l.us-east-2.rds.amazonaws.com",
         "port": 3306,
         "dialect": "mysql"
@@ -19,7 +19,7 @@
     "production": {
         "username": "walkerfloyd",
         "password": "GoHeels12345!",
-        "database": "movie-night-db",
+        "database": "movie_night_db",
         "host": "movie-night-db.cil5mbfsdo5l.us-east-2.rds.amazonaws.com",
         "port": 3306,
         "dialect": "mysql"

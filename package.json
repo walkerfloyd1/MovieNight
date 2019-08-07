@@ -1,5 +1,5 @@
 {
-  "name": "movie-night",
+  "name": "package.json",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -11,7 +11,10 @@
     "fs": "^0.0.1-security",
     "google-maps-react": "^2.0.2",
     "material-ui": "^0.20.2",
+    "mongodb": "^3.3.0-beta2",
+    "mongoose": "^5.6.8",
     "morgan": "^1.9.1",
+    "mysql": "^2.17.1",
     "path": "^0.12.7",
     "popper.js": "^1.15.0",
     "prop-types": "^15.7.2",
@@ -67,5 +70,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walkerfloyd1/MovieNight.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/walkerfloyd1/MovieNight/issues"
+  },
+  "homepage": "https://github.com/walkerfloyd1/MovieNight#readme"
 }

@@ -1,20 +1,12 @@
-module.exports = function (sequelize, DataTypes) {
-    const User_info = sequelize.define(
-        "User_info", {
-            firstName: {
-                type: DataTypes.STRING,
-                allowNull: false,
-            },
-            lastName: {
-                type: DataTypes.STRING,
-                allowNull: false
-            },
+module.exports = function (sequelize, Sequelize) {
+    const Preferences = sequelize.define(
+        "Preferences", {
             food: {
-                type: DataTypes.STRING,
+                type: Sequelize.STRING,
                 allowNull: false
             },
             genre: {
-                type: DataTypes.STRING,
+                type: Sequelize.STRING,
                 allowNull: false
             }
         });
@@ -23,5 +15,5 @@ module.exports = function (sequelize, DataTypes) {
         User_info.belongsTo(models.User);
     };
 
-    return User_info
+    return Preferences
 }

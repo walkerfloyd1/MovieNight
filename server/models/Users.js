@@ -2,7 +2,7 @@
 
 module.exports = function (sequelize, DataTypes) {
     const User = sequelize.define(
-        'User',
+        'Users',
         {
             email: {
                 type: DataTypes.STRING,
@@ -13,15 +13,15 @@ module.exports = function (sequelize, DataTypes) {
                 type: DataTypes.STRING,
                 allowNull: false
             },
-        },
-        {
-            timestamps: false,
-            instanceMethods: {
-                comparePassword: function(plaintextPassword) {
-                  return bcrypt.compareSync(plaintextPassword, this.password);
-                }
-            }
-        });
+        }
+        // {
+        //     timestamps: false,
+        //     instanceMethods: {
+        //         comparePassword: function(plaintextPassword) {
+        //           return bcrypt.compareSync(plaintextPassword, this.password);
+        //         }
+        //     }
+        );
 
     User.associate = function (models) {
         User.hasOne(models.User_info, {

@@ -4,4 +4,4 @@ CREATE DATABASE movie_night_db;
 
 USE movie_night_db;
 
-SELECT * from Users;
+SELECT * from user_infos;

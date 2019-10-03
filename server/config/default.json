@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://walkerfloyd:GoHeels12345!@movie-night-jtwxw.mongodb.net/admin?retryWrites=true&w=majority",
+    "jwtSecret": "secretToken"
+}

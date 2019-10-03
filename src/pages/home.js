@@ -58,6 +58,7 @@ class Home extends Component {
   transitionName="movieNight" transitionAppear={true}
   transitionAppearTimeout={1000}>
             <TopText> Welcome to MovieNight.</TopText>
+            <TopText> LET USERS SAVE THEIR FAVORITE RESTAURANTS AND MOVIE THEATERS</TopText>
             </ReactCSSTransitionGroup>
             <ReactCSSTransitionGroup
   transitionName="choice" transitionAppear={true}

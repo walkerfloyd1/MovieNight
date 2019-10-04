@@ -1,15 +1,10 @@
-const express = require("express");
+const express = require('express');
 const router = express.Router();
-const { register, login, loggedIn, logout } = require('../controllers/user');
+const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const config = require('config')
+const { check, validationResult } = require("express-validator");
 
-router.use('/addInfo', require('./users_info'));
 
-router.get('/loggedIn', loggedIn);
-
-router.post('/register', register);
-
-router.post('/login', login);
-
-router.get('/logout', logout);
 
 module.exports = router;

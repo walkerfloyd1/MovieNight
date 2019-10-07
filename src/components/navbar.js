@@ -56,11 +56,6 @@ class Navbar extends React.Component {
           <Menu>
           <ul>
           <li className="nav-item">
-              <Link to="/preferences" className={window.location.pathname === "/preferences" ? "nav-link active" : "nav-link"}>
-                Preferences
-              </Link>
-          </li>
-          <li className="nav-item">
               <Link to="/nightin" className={window.location.pathname === "/nightin" ? "nav-link active" : "nav-link"}>
                 Night In
               </Link>

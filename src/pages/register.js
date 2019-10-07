@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Container } from '../components/homeContainer.js';
 import Form from 'react-bootstrap/Form';
-import Home from './home.js';
+import { Link } from 'react-router-dom';
 
 const Text = styled.text`
         text-decoration: none;
@@ -65,10 +65,12 @@ class Register extends Component {
     <Text>Password</Text>
     <Input type="password"/>
   </Form.Group>
-
   <RegisterButton variant="primary" type="submit" onClick={this.register}>
     Register
   </RegisterButton>
+  <Link to="/signin">
+    Go to Sign In
+  </Link>
     </Form>
             </Container>
             </div>

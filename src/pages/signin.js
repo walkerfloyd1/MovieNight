@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Container } from '../components/homeContainer.js';
+import { Link } from 'react-router-dom';
+import { wButton } from '../components/styled-components/whiteButton'
 import Form from 'react-bootstrap/Form';
 
 
@@ -45,11 +47,17 @@ class Signin extends Component {
     constructor () {
         super()
         this.signIn = this.signIn.bind(this);
+        this.register = this.register.bind(this);
     }
 
     signIn() {
         let path="/preferences";
         this.props.history.push(path);
+    }
+
+    register() {
+      let path="/register";
+      this.props.history.push(path);
     }
 
     render() {
@@ -58,16 +66,18 @@ class Signin extends Component {
             <Form>
   <Form.Group controlId="formBasicEmail">
     <Username>Username</Username>
-    <Input type="email" placeholder="Enter email" />
+    <Input type="username" placeholder="Enter username" />
   </Form.Group>
-
   <Form.Group controlId="formBasicPassword">
     <Password>Password</Password>
     <Input type="password" placeholder="Password" />
   </Form.Group>
 
-  <SignInButton variant="primary" type="submit" onClick={this.signIn}>
+  <wButton variant="primary" type="submit" onClick={this.signIn}>
     Sign In
+  </wButton>
+  <SignInButton variant="primary" type="submit" onClick={this.register}>
+    Register
   </SignInButton>
     </Form>
             </Container>

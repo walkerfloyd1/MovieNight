@@ -11,9 +11,6 @@ const FavoriteSchema = new mongoose.Schema({
     },
     favoriteRestaurant: {
         type: Array
-    },
-    location: {
-        type: String
     }
 });
 

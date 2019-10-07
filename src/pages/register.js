@@ -61,10 +61,6 @@ class Register extends Component {
     <Text>User Name</Text>
     <Input type="username"/>
   </Form.Group>
-  <Form.Group controlId="formBasicEmail">
-    <Text>User Name</Text>
-    <Input type="email"/>
-  </Form.Group>
   <Form.Group controlId="formBasicPassword">
     <Text>Password</Text>
     <Input type="password"/>

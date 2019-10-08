@@ -1,88 +1,30 @@
 {
-  "name": "package.json",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.3.0",
-    "axios": "^0.19.0",
-    "body-parser": "^1.19.0",
-    "bootstrap": "^4.3.1",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "fs": "^0.0.1-security",
-    "google-maps-react": "^2.0.2",
-    "material-ui": "^0.20.2",
-    "mongodb": "^3.3.0-beta2",
-    "mongoose": "^5.6.8",
-    "morgan": "^1.9.1",
-    "mysql": "^2.17.1",
-    "path": "^0.12.7",
-    "popper.js": "^1.15.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-addons-css-transition-group": "^15.6.2",
-    "react-alice-carousel": "^1.15.2",
-    "react-bootstrap": "^1.0.0-beta.9",
-    "react-coverflow": "^0.2.20",
-    "react-dom": "^16.8.6",
-    "react-dropdown": "^1.6.4",
-    "react-id-swiper": "^2.3.2",
-    "react-image": "^2.1.3",
-    "react-image-hover": "^1.0.3",
-    "react-map-gl": "^5.0.7",
-    "react-modal": "^3.9.1",
-    "react-modal-dialog": "^4.0.7",
-    "react-responsive-carousel": "^3.1.49",
-    "react-responsive-menu": "^1.0.1",
-    "react-responsive-modal": "^4.0.1",
-    "react-responsive-navbar": "^1.0.11",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1",
-    "react-select": "^3.0.4",
-    "react-simple-input": "^0.4.2",
-    "react-slick": "^0.24.0",
-    "react-transition-group": "^4.2.1",
-    "reactstrap": "^8.0.1",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.87.3",
-    "sequelize": "^5.19.2",
-    "shards-react": "^1.0.3",
-    "styled-components": "^4.3.2",
-    "swiper": "^4.5.0",
-    "typescript": "^3.5.3"
-  },
+  "name": "movie-night",
+  "version": "1.0.0",
+  "description": "",
+  "main": "auth.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
-  "main": "index.js",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/walkerfloyd1/MovieNight.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/walkerfloyd1/MovieNight/issues"
   },
-  "homepage": "https://github.com/walkerfloyd1/MovieNight#readme"
+  "homepage": "https://github.com/walkerfloyd1/MovieNight#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.2.3",
+    "express": "^4.17.1",
+    "express-validator": "^6.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.3",
+    "path": "^0.12.7"
+  }
 }

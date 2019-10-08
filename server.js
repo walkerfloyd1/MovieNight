@@ -9,7 +9,7 @@ connectDB();
 //Routes-- add more later
 
 app.use('/api/users', require('./routes/users'));
-app.use('/api/user-info', require('./routes/users_info.js'));
+//app.use('/api/favorites', require('./routes/favorites.js'));
 
 
 if(process.env.NODE_ENV === 'production') {

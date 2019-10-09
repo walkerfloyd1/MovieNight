@@ -51,7 +51,7 @@ class Signin extends Component {
     }
 
     signIn() {
-        let path="/preferences";
+        let path="/profile";
         this.props.history.push(path);
     }
 

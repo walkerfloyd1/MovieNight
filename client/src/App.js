@@ -4,7 +4,6 @@ import Landing from "./pages/home.js";
 import NightIn from './pages/NightIn.js';
 import Signin from './pages/signin.js';
 import Register from './pages/register.js';
-import About from './pages/about.js';
 import NightOut from './pages/NightOut.js';
 import Profile from './pages/profile.js';
 
@@ -17,7 +16,6 @@ class App extends React.Component {
         <Route exact path="/nightin" component={NightIn}/>
         <Route exact path="/signin" component={Signin}/>
         <Route exact path="/register" component={Register}/>
-        <Route exact path="/about" component={About}/>
         <Route exact path="/nightout" component={NightOut}/>
         <Route exact path="/profile" component={Profile}/>
       </Router>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import Landing from "./pages/home.js";
-import NightIn from './pages/NightIn.js';
+import NightIn from './pages/NightIn/NightIn';
 import Signin from './pages/signin.js';
 import Register from './pages/register.js';
-import NightOut from './pages/NightOut.js';
+import NightOut from './pages/NightOut/NightOut';
 import Profile from './pages/profile.js';
 
 

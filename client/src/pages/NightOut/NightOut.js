@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Navbar from '../components/navbar.js';
+import Navbar from '../../components/navbar.js';
 import styled from 'styled-components';
-import { Container } from '../components/homeContainer.js';
+import { Container } from '../../components/homeContainer.js';
 
-import ZomatoResults from '../components/APIs/NightOut/zomatoAPI.js';
+import ZomatoResults from '../../components/APIs/NightOut/zomatoAPI.js';
 
-import NightOutResults from '../components/APIs/NightOut/nightOutTMDBApiCall';
+import NightOutResults from '../../components/APIs/NightOut/nightOutTMDBApiCall';
 
-import Map from '../components/APIs/NightOut/MapboxAPI'
+import Map from '../../components/APIs/NightOut/MapboxAPI'
 
 const Text = styled.text`
         text-decoration: none;

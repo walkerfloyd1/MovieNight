@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import NightInResults from '../components/APIs/NightIn/omdbApiResults';
-import Navbar from '../components/navbar.js';
+import NightInResults from '../../components/APIs/NightIn/omdbApiResults';
+import Navbar from '../../components/navbar.js';
 
 
 class NightIn extends Component {

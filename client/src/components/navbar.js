@@ -4,7 +4,17 @@ import { Link, Redirect } from "react-router-dom";
 
 import styled from 'styled-components';
 
-const Menu = styled.div`
+const NavbarDropdown = styled.div`
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0, 2);
+  padding: 12px 16px;
+  z-index: 1;
+`;
+
+const StyledNavbar = styled.div`
   
   ul {
     height: 50px;
@@ -38,28 +48,34 @@ const Menu = styled.div`
   }
 `;
 
+const listItem = styled.li`
+  position: relative;
+  display: block;
+  &:hover ${NavbarDropdown} {
+    display: block;
+  };
+`;
+
 class Navbar extends React.Component {
   constructor() {
     super()
   }
 
-
   render(){
     return (
-      <ResponsiveMenu
-        menuOpenButton={<div />}
-        menuCloseButton={<div />}
-        changeMenuOn="800px"
-        largeMenuClassName="large-menu-classname"
-        smallMenuClassName="small-menu-classname"
-        menu={
-          <Menu>
+
+          <StyledNavbar>
           <ul>
-          <li className="nav-item">
-              <Link to="/nightin" className={window.location.pathname === "/nightin" ? "nav-link active" : "nav-link"}>
+          <listItem>
+              <h1>
                 Night In
-              </Link>
-          </li>
+              </h1>
+              <NavbarDropdown>
+                <Link to="/nightin" className={window.location.pathname === "/nightin" ? "nav-link active" : "nav-link"}>
+                  Night In
+                </Link>
+              </NavbarDropdown>
+          </listItem>
             <li className="nav-item">
                 {/* haven't written the code for the page yet */}
               <Link
@@ -88,9 +104,7 @@ class Navbar extends React.Component {
           </Link>
           </li>
           </ul>
-          </Menu>
-        }
-        />  
+          </StyledNavbar> 
     );
   }
 }

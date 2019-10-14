@@ -71,10 +71,14 @@ const TopNavbar = (props) => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
+                <Link to="/recipes" className={window.location.pathname === "/recipes" ? "nav-link active" : "nav-link"}>
                   Search for Recipes
+                  </Link>
                 </DropdownItem>
                 <DropdownItem>
-                  Search for Movies
+                  <Link to="/movie" className={window.location.pathname === "/movie" ? "nav-link active" : "nav-link"}>
+                    Search for Movies
+                  </Link>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -84,10 +88,14 @@ const TopNavbar = (props) => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  
+                <Link to="/food" className={window.location.pathname === "/food" ? "nav-link active" : "nav-link"}>
+                  Search for Food
+                  </Link>
                 </DropdownItem>
                 <DropdownItem>
-                  Search for Showtimes
+                <Link to="/theaters" className={window.location.pathname === "/theaters" ? "nav-link active" : "nav-link"}>
+                  Search for Movie Theaters
+                  </Link>
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
@@ -108,38 +116,6 @@ const TopNavbar = (props) => {
                 Logout
             </Link>
             </NavItem>
-          {/* <ul>
-          <li className="nav-item">
-              <Link to="/nightin" className={window.location.pathname === "/nightin" ? "nav-link active" : "nav-link"}>
-                Night In
-              </Link>
-          </li>
-            <li className="nav-item">
-              <Link
-            to="/nightout"
-            className={window.location.pathname === "/nightout" ? "nav-link active" : "nav-link"}
-              >
-                Night Out
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                to="/profile"
-                className={window.location.pathname === "/profile" ? "nav-link active" : "nav-link"}
-              >
-                Profile
-              </Link>
-           </li>
-        <li className="nav-item">
-          <Link
-            to="/signin"
-            className={window.location.pathname === "/signin" ? "nav-link active" : "nav-link"}  
-            onClick={this.logout}
-          >
-            Logout
-          </Link>
-          </li>
-          </ul> */}
           </Nav>
           </Collapse>
           </Navbar>

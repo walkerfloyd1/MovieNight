@@ -1,13 +1,14 @@
 import React from 'react';
 import TopNavbar from '../../components/navbar';
+import NightOutResults from '../../components/APIs/NightOut/nightOutTMDBApiCall';
+import Map from '../../components/APIs/NightOut/MapboxAPI';
 
 const NightOutTheaters = () => {
     return (
         <div>
             <TopNavbar />
-            <h1>
-                This is where the Theaters will go
-            </h1>
+            <Map />
+            <NightOutResults />
         </div>
     )
 }

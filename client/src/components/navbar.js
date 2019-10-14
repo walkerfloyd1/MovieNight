@@ -17,7 +17,7 @@ import {
 
 import styled from 'styled-components';
 
-const Menu = styled.div`
+const Menu = styled.nav`
   
   ul {
     height: 50px;
@@ -61,12 +61,15 @@ const TopNavbar = (props) => {
 
     return (
       <div>
-          <Navbar color="light" light expand="md">
+          <Navbar expand="md" light color="light"  
+          >
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
             <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
+              <DropdownToggle nav caret
+                
+              >
                 NightIn
               </DropdownToggle>
               <DropdownMenu right>

@@ -1,13 +1,12 @@
 import React from 'react';
 import TopNavbar from '../../components/navbar';
+import NightInResults from '../../components/APIs/NightIn/omdbApiResults';
 
 const NightInFood = props => {
     return (
         <div>
             <TopNavbar />
-            <h1>
-                This is where food will go
-            </h1>
+            <NightInResults />
         </div>
     )
 }

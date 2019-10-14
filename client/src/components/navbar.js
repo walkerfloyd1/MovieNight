@@ -1,6 +1,19 @@
-import ResponsiveMenu from 'react-responsive-navbar';
-import React from "react";
+
+import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
+
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem } from 'reactstrap';
 
 import styled from 'styled-components';
 
@@ -38,30 +51,70 @@ const Menu = styled.div`
   }
 `;
 
-class Navbar extends React.Component {
-  constructor() {
-    super()
-  }
+const TopNavbar = (props) => {
+  
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => setIsOpen(!isOpen);
 
 
-  render(){
+
     return (
-      <ResponsiveMenu
-        menuOpenButton={<div />}
-        menuCloseButton={<div />}
-        changeMenuOn="800px"
-        largeMenuClassName="large-menu-classname"
-        smallMenuClassName="small-menu-classname"
-        menu={
-          <Menu>
-          <ul>
+      <div>
+          <Navbar color="light" light expand="md">
+          <NavbarToggler onClick={toggle} />
+          <Collapse isOpen={isOpen} navbar>
+            <Nav className="ml-auto" navbar>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                NightIn
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>
+                  Search for Recipes
+                </DropdownItem>
+                <DropdownItem>
+                  Search for Movies
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            <UncontrolledDropdown nav inNavbar>
+              <DropdownToggle nav caret>
+                NightOut
+              </DropdownToggle>
+              <DropdownMenu right>
+                <DropdownItem>
+                  
+                </DropdownItem>
+                <DropdownItem>
+                  Search for Showtimes
+                </DropdownItem>
+              </DropdownMenu>
+            </UncontrolledDropdown>
+            <NavItem>
+            <Link
+                to="/profile"
+                className={window.location.pathname === "/profile" ? "nav-link active" : "nav-link"}
+              >
+                Profile
+              </Link>
+            </NavItem>
+            <NavItem>
+            <Link
+              to="/signin"
+              className={window.location.pathname === "/signin" ? "nav-link active" : "nav-link"}  
+              //onClick={this.logout}
+              >
+                Logout
+            </Link>
+            </NavItem>
+          {/* <ul>
           <li className="nav-item">
               <Link to="/nightin" className={window.location.pathname === "/nightin" ? "nav-link active" : "nav-link"}>
                 Night In
               </Link>
           </li>
             <li className="nav-item">
-                {/* haven't written the code for the page yet */}
               <Link
             to="/nightout"
             className={window.location.pathname === "/nightout" ? "nav-link active" : "nav-link"}
@@ -70,7 +123,6 @@ class Navbar extends React.Component {
               </Link>
             </li>
             <li className="nav-item">
-                {/* haven't written the code for the page yet */}
               <Link
                 to="/profile"
                 className={window.location.pathname === "/profile" ? "nav-link active" : "nav-link"}
@@ -87,12 +139,12 @@ class Navbar extends React.Component {
             Logout
           </Link>
           </li>
-          </ul>
-          </Menu>
-        }
-        />  
-    );
+          </ul> */}
+          </Nav>
+          </Collapse>
+          </Navbar>
+        </div>
+        ) ;
   }
-}
 
-export default Navbar;
+export default TopNavbar;

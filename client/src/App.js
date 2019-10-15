@@ -3,11 +3,7 @@ import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-ro
 import Landing from "./pages/home.js";
 import Login from './redux/auth/Login';
 import Register from './redux/auth/Register';
-import Profile from './pages/profile.js';
-import NightInFood from './pages/NightIn/NightInFood';
-import NightInMovie from './pages/NightIn/NightInMovie';
-import NightOutTheaters from './pages/NightOut/NightOutTheaters';
-import NightOutFood from './pages/NightOut/NightOutFood';
+import Routes from './redux/routing/Routes';
 
 import { Provider } from 'react-redux';
 import store from './redux/store';
@@ -27,14 +23,12 @@ const App = () => {
     return (
       <Provider store={store}>
       <Router>
+        <Switch>
         <Route exact path="/" component={Landing}/>
-        <Route exact path="/recipes" component={NightInFood}/>
-        <Route exact path="/movie" component={NightInMovie}/>
         <Route exact path="/signin" component={Login}/>
         <Route exact path="/register" component={Register}/>
-        <Route exact path="/food" component={NightOutFood}/>
-        <Route exact path="/theaters" component={NightOutTheaters}/>
-        <Route exact path="/profile" component={Profile}/>
+        <Route component={Routes} />
+        </Switch>
       </Router>
       </Provider>
     )

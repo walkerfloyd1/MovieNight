@@ -1,14 +1,16 @@
 const express = require('express');
-const connectDB = require('./config/db')
+const connectDB = require('./config/db.js')
 const path = require('path');
 
 const app = express();
 
 connectDB();
 
+app.use(express.json({ extended: false }));
+
 //Routes-- add more later
 
-app.use('/api/users', require('./routes/users'));
+app.use('/users', require('./routes/users'));
 //app.use('/api/favorites', require('./routes/favorites.js'));
 
 
@@ -23,6 +25,6 @@ if(process.env.NODE_ENV === 'production') {
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
+app.listen(PORT, () => 
    console.log("Listening")
-})
+)

@@ -1,9 +1,11 @@
-const mongoose = require("mongoose");
-const config = require("config");
-const db = config.get("mongoURI");
+const mongoose = require('mongoose');
+const config = require('config');
+const db = config.get('mongoURI');
 
 const connectDB = async () => {
+    console.log("connect DB called");
     try {
+        console.log(db)
         await mongoose.connect(db, {
             useNewUrlParser: true,
             useCreateIndex: true,
@@ -11,8 +13,8 @@ const connectDB = async () => {
         })
 
         console.log("MongoDB connected!")
-    } catch (error) {
-        console.error(error.message);
+    } catch (err) {
+        console.error(err.message);
         process.exit(1)
     }
 }

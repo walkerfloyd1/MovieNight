@@ -4,6 +4,7 @@ import NightInFood from '../../pages/NightIn/NightInFood';
 import NightInMovie from '../../pages/NightIn/NightInMovie';
 import NightOutTheaters from '../../pages/NightOut/NightOutTheaters';
 import NightOutFood from '../../pages/NightOut/NightOutFood';
+import PrivateRoute from './PrivateRoute';
 import { Route, Switch } from 'react-router';
 
 const Routes = props => {

@@ -2,7 +2,7 @@ import React, { Fragment,useEffect } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch, Redirect } from "react-router-dom";
 import Landing from "./pages/home.js";
 import Login from './redux/auth/Login';
-import Register from './pages/register.js';
+import Register from './redux/auth/Register';
 import Profile from './pages/profile.js';
 import NightInFood from './pages/NightIn/NightInFood';
 import NightInMovie from './pages/NightIn/NightInMovie';

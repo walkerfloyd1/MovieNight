@@ -13,6 +13,11 @@ app.use(express.json({ extended: false }));
 app.use('/users', require('./routes/users'));
 //app.use('/api/favorites', require('./routes/favorites.js'));
 
+app.use(function(req, res, next) {
+   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Headers");
+   next();
+ });
+
 
 if(process.env.NODE_ENV === 'production') {
    //set static folder

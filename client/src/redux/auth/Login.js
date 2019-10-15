@@ -71,8 +71,7 @@ const Login = props => {
     <Password>Password</Password>
     <Input type="password" placeholder="Password" name="password" minLength="7" value={password} onChange={e => onChange(e)} required/>
   </Form.Group>
-        <Input type="submit" value="Login" />
-  <SignInButton variant="primary" type="submit" onClick={this.register}>
+  <SignInButton variant="primary" type="submit">
     Submit
   </SignInButton>
   </Form>

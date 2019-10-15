@@ -14,10 +14,7 @@ router.post('/', [
     check('password', 'Please input a valid password').isLength({
         min: 8
     })
-], async (
-    req,
-    res
-) => {
+], async (req, res) => {
     const errors = validationResult(req);
     if(!errors.isEmpty()) {
         return res.status(400).json({
@@ -35,15 +32,14 @@ router.post('/', [
     try {
 
         let user = await User.findOne({
-            username
+            email
         })
         
         if (user) {
             return res.status(400).json({
                 errors: [{
                     msg: 'A user already exists with this email'
-                }
-                ]
+                }]
             })
         }
 
@@ -54,9 +50,9 @@ router.post('/', [
             password
         })
 
-        const jwtSalt = await bcrypt.genSalt(10);
+        const salt = await bcrypt.genSalt(10);
 
-        user.password = await bcrypt.hash(password,jwtSalt);
+        user.password = await bcrypt.hash(password,salt);
 
         await user.save();
 
@@ -71,12 +67,12 @@ router.post('/', [
             config.get('jwtSecret'),
         { expiresIn: 360000 },
         ( err, token ) => {
-            if (err) throw err;
+            if(err) throw err;
             res.json({ token })
         });
         
     } catch (error) {
-        console.error(err.message);
+        console.log(err.message);
         res.status(500).send('Server error')
     }
 });

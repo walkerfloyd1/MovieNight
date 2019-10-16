@@ -11,6 +11,7 @@ app.use(express.json({ extended: false }));
 //Routes-- add more later
 
 app.use('/users', require('./routes/users'));
+app.use('/auth', require('./routes/auth'));
 //app.use('/api/favorites', require('./routes/favorites.js'));
 
 app.use(function(req, res, next) {

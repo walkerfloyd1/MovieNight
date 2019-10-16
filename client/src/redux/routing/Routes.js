@@ -5,12 +5,12 @@ import NightInMovie from '../../pages/NightIn/NightInMovie';
 import NightOutTheaters from '../../pages/NightOut/NightOutTheaters';
 import NightOutFood from '../../pages/NightOut/NightOutFood';
 import PrivateRoute from './PrivateRoute';
-import { Route, Switch } from 'react-router';
+import { Switch } from 'react-router';
 
 const Routes = props => {
     return (
         <Switch>
-            <Route exact path="/profile" component={Profile} />
+            <PrivateRoute exact path="/profile" component={Profile} />
             <PrivateRoute exact path="/nightinfood" component={NightInFood} />
             <PrivateRoute exact path="/nightinmovie" component={NightInMovie} />
             <PrivateRoute exact path="/nightoutfood" component={NightOutFood} />

@@ -1,6 +1,8 @@
-
 import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import { logout } from '../redux/actions/auth';
 
 import {
   Collapse,
@@ -15,9 +17,7 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 
-import styled from 'styled-components';
-
-const TopNavbar = (props) => {
+const TopNavbar = ({auth: { isAuthenticated }, logout }) => {
   
   const [isOpen, setIsOpen] = useState(false);
 
@@ -76,15 +76,14 @@ const TopNavbar = (props) => {
                 Profile
               </Link>
             </NavItem>
+          { isAuthenticated ? <h1> Not Authenticated </h1> : 
             <NavItem>
-            <Link
-              to="/signin"
-              className={window.location.pathname === "/signin" ? "nav-link active" : "nav-link"}  
-              //onClick={this.logout}
+            <a
+              onClick={logout}
               >
                 Logout
-            </Link>
-            </NavItem>
+            </a>
+          </NavItem> }
           </Nav>
           </Collapse>
           </Navbar>
@@ -92,4 +91,13 @@ const TopNavbar = (props) => {
         ) ;
   }
 
-export default TopNavbar;
+TopNavbar.propTypes = {
+  auth: PropTypes.object.isRequired,
+  logout: PropTypes.func.isRequired,
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+})
+
+export default connect(mapStateToProps, { logout })(TopNavbar);

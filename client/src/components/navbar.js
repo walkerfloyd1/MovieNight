@@ -17,40 +17,6 @@ import {
 
 import styled from 'styled-components';
 
-const Menu = styled.nav`
-  
-  ul {
-    height: 50px;
-    background-color: white;
-    text-align: center;
-    margin: 0px;
-  }
-  li {
-    padding-top: 20px;
-    display: inline-block;
-    font-size: 13px;
-    margin-left: 30px;
-  }
-  a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 15px;
-    color: black;
-    &:hover {
-      color: gray;
-      border-bottom: 1px solid
-    }
-  }
-  @media (max-width: 500px) {
-    padding: 10px 0;
-    li {
-      padding: 10px 0;
-      display: block;
-      margin-left: 0;
-    }
-  }
-`;
-
 const TopNavbar = (props) => {
   
   const [isOpen, setIsOpen] = useState(false);

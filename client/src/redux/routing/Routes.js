@@ -10,7 +10,7 @@ import { Route, Switch } from 'react-router';
 const Routes = props => {
     return (
         <Switch>
-            <PrivateRoute exact path="/profile" component={Profile} />
+            <Route exact path="/profile" component={Profile} />
             <PrivateRoute exact path="/nightinfood" component={NightInFood} />
             <PrivateRoute exact path="/nightinmovie" component={NightInMovie} />
             <PrivateRoute exact path="/nightoutfood" component={NightOutFood} />

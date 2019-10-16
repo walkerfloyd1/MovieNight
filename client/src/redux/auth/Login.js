@@ -46,7 +46,7 @@ const Input = styled.input`
     `;
 
 
-const Login = props => {
+const Login = ({ login, isAuthenticated }) => {
     const [formData, setFormData] = useState({
         username: '',
         password: '',
@@ -60,6 +60,10 @@ const Login = props => {
         e.preventDefault();
         login(username, password);
       };
+
+    if (isAuthenticated) {
+      return <Redirect to="/profile" />;
+    }
     return (
         <Container>
             <Form onSubmit={e => onSubmit(e)}>
@@ -72,7 +76,7 @@ const Login = props => {
     <Input type="password" placeholder="Password" name="password" minLength="7" value={password} onChange={e => onChange(e)} required/>
   </Form.Group>
   <SignInButton variant="primary" type="submit">
-    Submit
+    Sign In
   </SignInButton>
   </Form>
   <p className="my-1">

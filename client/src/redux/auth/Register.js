@@ -65,7 +65,7 @@ const Register = ({
           });
     }
     if (isAuthenticated) {
-        return <Redirect to="/profile" />
+        return <Redirect to="/signin" />
     }
     return (
         <Container>
